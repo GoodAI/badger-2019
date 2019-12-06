@@ -39,7 +39,7 @@ We empirically show that the benefit of ATOC is that we can train a shared polic
 Results of training of the ATOC without communication for N=4 and then applying to N=12 environment.
 Due to the shared policy and locally-defined observations, the experts can work in the bigger setting still reasonably well. 
 
-This is an example convergence of the ATOC without communication in case of N=4.
+This is an example convergence of the ATOC without communication in case of N=4 (better comparison to be added soon).
 
 ![Exmaple convergence of the ATOC without communication learning on N=4](images/convergence_atoc_no_comm.png)
 
@@ -57,9 +57,9 @@ ATOC policy without communication trained on N=4 and evaluated on N=80
 
 ### Reproducing the results
 
-The experiment can be ran from `experimental/deeprl/experiments/` using either the `run_multiagent.py` script which accepts the commandline parameters, or any of the preconfigured scripts `batch_run_*`. 
+The experiment can be ran from the root directory by `marl/experimental/deeprl/experiments/run_multiagent.py` script which accepts the commandline parameters, or any of the preconfigured scripts `marl/experimental/deeprl/experiments/batch_run_*`, the scripts will store serialized models and average reward statistics under `data/models/` and `data/stats`.
 
-The `run_multiagent.py` script allows you to configure any of the main parameters of the simulation using commandline parameters. A complete configuration for each of the networks (ATOC, DDPG, DDPG_global) can be found in their json files under `experimental/deeprl/experiments/data/json`.
+The `run_multiagent.py` script allows you to configure any of the main parameters of the simulation using commandline parameters. A complete configuration for each of the networks (ATOC, DDPG, DDPG_global) can be found in their json files under `marl/experimental/deeprl/experiments/data/json`.
 
 ## Discussion and next steps
 

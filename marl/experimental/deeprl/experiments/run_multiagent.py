@@ -27,7 +27,7 @@ if __name__ == "__main__":
     # parse arguments, get the core configuration
     args = parse_args()
 
-    json_loc = "data/json/"
+    json_loc = "marl/experimental/deeprl/experiments/data/json/"
 
     if args.type == 'DDPG':
         json_loc += "ddpg.json"

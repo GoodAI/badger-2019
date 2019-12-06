@@ -13,3 +13,4 @@ marl/Models/
 .DS_Store
 awscli-bundle/*
 
+data/
