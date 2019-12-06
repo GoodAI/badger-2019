@@ -1,0 +1,11 @@
+
+
+graphviz
+matplotlib
+plotly
+pandas
+
+# CPU version of pytorch from anaconda (?) :
+# conda install pytorch-cpu torchvision-cpu -c pytorch
+
+# running under IC3Net environment

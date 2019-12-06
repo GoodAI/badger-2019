@@ -1,0 +1,15 @@
+
+gym==0.10.5
+
+numpy
+numpy-stl
+graphviz
+matplotlib
+plotly
+pandas
+pyformulas==0.2.8
+
+# CPU version of pytorch from anaconda (?) :
+# conda install pytorch-cpu torchvision-cpu -c pytorch
+
+# running in the particles environment

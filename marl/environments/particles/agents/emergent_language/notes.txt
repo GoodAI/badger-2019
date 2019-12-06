@@ -1,0 +1,39 @@
+TODO:
+--------
+[x] Weight saving
+[x] Add a test mode where utterances are argmaxed instead of Gumbel-softmaxed
+[x] Add a way to "replay" an episode easily
+[x] Better loss over time information printing
+[x] Batching
+[x] Test role of comms by testing in envs where each agent knows its goal vs it doesn't
+    [x] Make it possible to have agent get its own goal, determinable with a flag
+    [x] Make this a training flag
+    [ ] Test how this affects performance
+[x] Get avg final distance of agents to their goals
+[x] Goal predictions(relative to yourself and agent index)
+
+HYPERPARAMETER TUNING:
+-------------------------
+
+
+LEARNING END:
+-------------
+[ ] Try relative goals (left of landmark, above landmark), see if relative direction words evolve
+[ ] Give different award coefficients to goals, have a single agent have multiple goals, see if award values can be communicated
+
+DISTANT FUTURE:
+--------------
+[ ] Visualization of a game
+[ ] Web interface to give an initial game state and see how the agents act and what they utter
+
+
+Unstructured thoughts:
+----------------
+- Color words
+  - Simulate different visual systems, see how color words evolve
+- Verbs
+  - GO
+  - TAKE (i.e. make landmarks movable, have a goal be the moving of a landmark to another landmark)
+- Make sequential goals (i.e. go to blue, then green) and also multi-landmark but not ordered goals (go to green and blue in any order). See if a way to discriminate evolves
+- Narration (Agent A observes a certain environment, tries to describe it to Agent B, Agent B predicts the environment history)
+

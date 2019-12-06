@@ -1,1 +1,15 @@
 /*.iml
+
+*.pt
+*.pyc
+*.log
+*.pkl
+
+marl/experimental/deeprl/experiments/data/models/*
+marl/experimental/deeprl/experiments/data/stats/*
+marl/experimental/deeprl/experiments/data/figures/*
+marl/Models/
+.idea/
+.DS_Store
+awscli-bundle/*
+

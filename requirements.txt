@@ -9,3 +9,22 @@ pillow
 bokeh
 pandas-bokeh
 pandas
+
+### marl part addition:
+pyformulas==0.2.8
+
+nn_builder
+pytest
+tqdm
+pillow
+
+# torch installed using this:
+#   conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
+
+gitpython
+gym
+
+# pyglet-related errors for the particles environment:
+# https://stackoverflow.com/questions/53472940/nameerror-name-base-is-not-defined-openai-gym
+# conda install -c conda-forge pyglet
+
