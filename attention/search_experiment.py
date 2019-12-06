@@ -9,7 +9,7 @@ from sacred.run import Run
 from tqdm import tqdm
 
 from attention.models.attention.attention import AttentionOperation
-from badger_utils.view.observer_utils import Observer, MultiObserver
+from attention.utils.observer_utils import MultiObserver
 from attention.utils.torch_utils import default_device
 
 from sacred import Experiment
