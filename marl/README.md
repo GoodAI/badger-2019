@@ -18,11 +18,11 @@ https://arxiv.org/abs/1706.02275).
 The environment is 2D (top-down) with simulated physics, blue experts can accelerate in two directions (x, y) and can collide against each other.
 In the Cooperative Navigation task, there are N experts and N landmarks; the experts should cover the landmarks in a cooperative way while avoiding collisions, the population of experts are collectively judged on how many of the landmarks are covered and the number of collisions that occurred.
 
-Compared to the original paper, our experts perceive tht M nearest landmarks and M-1 nearest experts in an ego-centric manner. The paper [Learning attentional communication for multi-agent cooperation](https://arxiv.org/abs/1805.07733), which presents the attentional-communication model ATOC, uses these same local observation on the same task.
+Compared to the original paper, our experts perceive positions of M nearest landmarks and M-1 nearest experts in an ego-centric manner and its own velocity. The paper [Learning attentional communication for multi-agent cooperation](https://arxiv.org/abs/1805.07733), which presents the attentional-communication model ATOC, uses these same local observation on the same task.
 
 ## Model description
 
-We have implemented the following algorithms: Deep Deterministic Policy Gradients (DDPG) presented in [Continuous control with deep reinforcement learning](https://arxiv.org/pdf/1509.02971.pdf) and the [ATOC](https://arxiv.org/abs/1805.07733), although we are primarily interested in the locality properties, and are not focusing on communication yet.
+We have implemented the following algorithms: Deep Deterministic Policy Gradients (DDPG) presented in [Continuous control with deep reinforcement learning](https://arxiv.org/pdf/1509.02971.pdf) and the [ATOC](https://arxiv.org/abs/1805.07733), although we are primarily interested in the locality properties, and are not focusing on communication yet. All policies are feedforward networks with 4 hidden layers with LeakyReLU activations and Tanh on the output.
 
 We compare the performance of:
 
