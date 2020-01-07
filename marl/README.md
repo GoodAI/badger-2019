@@ -24,14 +24,18 @@ Compared to the original paper, our experts perceive positions of M nearest land
 
 We have implemented the following algorithms: Deep Deterministic Policy Gradients (DDPG) presented in [Continuous control with deep reinforcement learning](https://arxiv.org/pdf/1509.02971.pdf) and the [ATOC](https://arxiv.org/abs/1805.07733), although we are primarily interested in the locality properties, and are not focusing on communication yet. All policies are feedforward networks with 4 hidden layers with LeakyReLU activations and Tanh on the output.
 
-We compare the performance of:
+We provide the implementations of:
 
 * Independent DDPG policies (each expert is controlled by its own DDPG policy)
 * Global DDPG policy (all expert are controlled by one DDPG policy)
 * ATOC without communication (each expert is controlled by own DDPG, where all experts share the same policy).
 
-Each of the experiments is ran with N=4 (number of experts and landmarks) and N=12.
-We empirically show that the benefit of ATOC is that we can train a shared policy on N=4 and then successfully apply that policy to the scenario with N=12 without retraining. And that the performance difference between N=4 and N=12 is negligible.
+Each of the experiments can be ran with N=4 (number of experts and landmarks) and N=12.
+
+The benefit of ATOC is that we can train a shared policy on N=4 and then successfully apply that policy to the scenario with N=12 without retraining. The resulting performance difference between N=4 and N=12 is negligible.
+
+Compared to that, the Global DDPG policy is not scalable, because adding more experts changes IO dimension sizes, which implies different network size).
+The Independent DDPG policies are not scalable (easily), since all currently trained policies potentially different.
 
 
 ## Results
@@ -66,8 +70,4 @@ The `run_multiagent.py` script allows you to configure any of the main parameter
 This experiment validated the promising property of scalable expert policies which are shared across experts and make use of only local observations.
 
 Next, we will consider experiments with communication between experts.
-
-
-
-
 
