@@ -43,7 +43,7 @@ The Independent DDPG policies are not scalable (easily), since all currently tra
 Results of training of the ATOC without communication for N=4 and then applying to N=12 environment.
 Due to the shared policy and locally-defined observations, the experts can work in the bigger setting still reasonably well. 
 
-This is an example convergence of the ATOC without communication in case of N=4 (better comparison to be added soon).
+This is an example convergence of the ATOC without communication in case of N=4.
 
 ![Exmaple convergence of the ATOC without communication learning on N=4](images/convergence_atoc_no_comm.png)
 
